@@ -136,5 +136,137 @@ a6221c2247610b7b6f3fd1164713e561
 8095eb4edb89dd0bda7a3d44cbf40c75
 3c6b1f9ba99a1f50013c61131f8cc744
 -----END OpenVPN Static key V1-----
+</tls-crypt>"},
+  {"id":1,"file":"client
+dev tun
+proto udp
+remote 219.75.98.239 443
+resolv-retry infinite
+nobind
+tun-mtu 1500
+tun-mtu-extra 32
+mssfix 1450
+user nobody
+group nogroup
+persist-key
+persist-tun
+keepalive 10 120
+remote-cert-tls server
+cipher AES-256-GCM
+auth SHA256
+verb 3
+key-direction 1
+; script-security 2
+; up /etc/openvpn/update-resolv-conf
+; down /etc/openvpn/update-resolv-conf
+; script-security 2
+; up /etc/openvpn/update-systemd-resolved
+; down /etc/openvpn/update-systemd-resolved
+; down-pre
+; dhcp-option DOMAIN-ROUTE .
+<ca>
+-----BEGIN CERTIFICATE-----
+MIIB+jCCAX+gAwIBAgIUAWjvRgcwhmSEunlqjmVnGGM3070wCgYIKoZIzj0EAwQw
+FTETMBEGA1UEAwwKb3BlbnZwbl9jYTAeFw0yMTA1MjIwNTU5NDdaFw0zMTA1MjAw
+NTU5NDdaMBUxEzARBgNVBAMMCm9wZW52cG5fY2EwdjAQBgcqhkjOPQIBBgUrgQQA
+IgNiAARp76diwBYGFblZg+pSBV8WeaurfD/jPmx/OLbZ9+nWWmEmkNOnekDSBkSq
+Qu/rr2iHhxFa2AoRBg8ey4o8fvYKqQ6Re2Jt7K7rRQwuaKk48U1LAKqD0gMK27+h
+ygFP1tWjgY8wgYwwHQYDVR0OBBYEFNrd6ukdiVSlqyAgK1enkgRUaefbMFAGA1Ud
+IwRJMEeAFNrd6ukdiVSlqyAgK1enkgRUaefboRmkFzAVMRMwEQYDVQQDDApvcGVu
+dnBuX2NhghQBaO9GBzCGZIS6eWqOZWcYYzfTvTAMBgNVHRMEBTADAQH/MAsGA1Ud
+DwQEAwIBBjAKBggqhkjOPQQDBANpADBmAjEA6qn9lflXE4PbCvx02krOYhl80ZR7
+vEvTzSsz4WqmH/TY5vm0e16Ec2pYv8/hR9ZAAjEAy8c2M0hIVxS4GQ4rMsbHFhg1
+2IR3KcuAf8NPJoB5/6Y62zGeNhzS1SAdnNDkv1Hd
+-----END CERTIFICATE-----
+</ca>
+<cert>
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            65:7a:d6:4a:d4:f5:79:7e:7f:b8:47:d8:95:c0:87:08
+        Signature Algorithm: ecdsa-with-SHA512
+        Issuer: CN=openvpn_ca
+        Validity
+            Not Before: May 22 07:10:40 2021 GMT
+            Not After : May  6 07:10:40 2024 GMT
+        Subject: CN=client1
+        Subject Public Key Info:
+            Public Key Algorithm: id-ecPublicKey
+                Public-Key: (384 bit)
+                pub:
+                    04:07:37:68:76:0e:a3:af:74:23:3a:39:19:79:fd:
+                    44:3d:6c:b1:ce:9b:54:76:dc:8e:3b:b9:f5:67:eb:
+                    d3:47:de:ad:6e:29:b2:62:17:ef:71:a4:f2:b5:95:
+                    0e:42:b2:d5:cf:6b:68:7d:f8:b9:38:19:cb:b9:c7:
+                    3d:49:53:7f:c2:60:89:cf:86:66:d5:a8:a9:27:ec:
+                    cb:c1:6f:01:8a:a6:83:01:f4:03:22:24:1d:98:b8:
+                    a5:77:c6:e9:b7:f6:be
+                ASN1 OID: secp384r1
+                NIST CURVE: P-384
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            X509v3 Subject Key Identifier: 
+                15:C7:A5:C9:14:09:AC:FC:E8:F4:85:C9:BB:66:AD:31:F3:E1:37:0B
+            X509v3 Authority Key Identifier: 
+                keyid:DA:DD:EA:E9:1D:89:54:A5:AB:20:20:2B:57:A7:92:04:54:69:E7:DB
+                DirName:/CN=openvpn_ca
+                serial:01:68:EF:46:07:30:86:64:84:BA:79:6A:8E:65:67:18:63:37:D3:BD
+            X509v3 Extended Key Usage: 
+                TLS Web Client Authentication
+            X509v3 Key Usage: 
+                Digital Signature
+    Signature Algorithm: ecdsa-with-SHA512
+         30:65:02:30:6a:43:f2:eb:02:2e:90:0f:cf:fb:62:8f:7b:d4:
+         9e:00:b6:ae:1b:37:ed:7b:62:f5:17:ea:0f:c4:31:d5:e3:d8:
+         3e:b2:d6:e0:a3:cf:e8:47:70:2b:2f:f7:dd:f0:c5:15:02:31:
+         00:b2:08:75:bd:18:45:93:6a:b1:ac:fd:48:b8:48:4f:a0:49:
+         f2:85:c2:08:bb:ee:20:5d:76:61:c5:cf:81:8f:d4:63:b9:44:
+         04:ce:dc:43:32:29:ad:d1:de:a7:7c:68:61
+-----BEGIN CERTIFICATE-----
+MIICBDCCAYqgAwIBAgIQZXrWStT1eX5/uEfYlcCHCDAKBggqhkjOPQQDBDAVMRMw
+EQYDVQQDDApvcGVudnBuX2NhMB4XDTIxMDUyMjA3MTA0MFoXDTI0MDUwNjA3MTA0
+MFowEjEQMA4GA1UEAwwHY2xpZW50MTB2MBAGByqGSM49AgEGBSuBBAAiA2IABAc3
+aHYOo690Izo5GXn9RD1ssc6bVHbcjju59Wfr00ferW4psmIX73Gk8rWVDkKy1c9r
+aH34uTgZy7nHPUlTf8Jgic+GZtWoqSfsy8FvAYqmgwH0AyIkHZi4pXfG6bf2vqOB
+oTCBnjAJBgNVHRMEAjAAMB0GA1UdDgQWBBQVx6XJFAms/Oj0hcm7Zq0x8+E3CzBQ
+BgNVHSMESTBHgBTa3erpHYlUpasgICtXp5IEVGnn26EZpBcwFTETMBEGA1UEAwwK
+b3BlbnZwbl9jYYIUAWjvRgcwhmSEunlqjmVnGGM3070wEwYDVR0lBAwwCgYIKwYB
+BQUHAwIwCwYDVR0PBAQDAgeAMAoGCCqGSM49BAMEA2gAMGUCMGpD8usCLpAPz/ti
+j3vUngC2rhs37Xti9RfqD8Qx1ePYPrLW4KPP6EdwKy/33fDFFQIxALIIdb0YRZNq
+saz9SLhIT6BJ8oXCCLvuIF12YcXPgY/UY7lEBM7cQzIprdHep3xoYQ==
+-----END CERTIFICATE-----
+</cert>
+<key>
+-----BEGIN PRIVATE KEY-----
+MIG2AgEAMBAGByqGSM49AgEGBSuBBAAiBIGeMIGbAgEBBDCwKITpdrZ0G7JzR7T9
+GM3VdUjdElUk54e+qiyPxEG11FAcQopjzt23yvqIEucjIqOhZANiAAQHN2h2DqOv
+dCM6ORl5/UQ9bLHOm1R23I47ufVn69NH3q1uKbJiF+9xpPK1lQ5CstXPa2h9+Lk4
+Gcu5xz1JU3/CYInPhmbVqKkn7MvBbwGKpoMB9AMiJB2YuKV3xum39r4=
+-----END PRIVATE KEY-----
+</key>
+<tls-crypt>
+#
+# 2048 bit OpenVPN static key
+#
+-----BEGIN OpenVPN Static key V1-----
+0e5f3fa57b67affbca33c8b763241d8d
+f7d4fccac70bc23aa9fffcdf6ffde238
+e3c76da2762800ec74071c58d88093b9
+bb8819c4ba22963fdfdf0c5d3e61ab93
+973819072878db416da09f2bf781ccb3
+a014cbda227c0122be2c4106f9701a02
+eef6415ef3f6ee382ddf77f61a5128d7
+663e3f8335f470bc60c00fe0a9c715ca
+fc304240ffd2b5945f5db0c1e5e038a1
+a6221c2247610b7b6f3fd1164713e561
+250bf655052a8347986d18e7252c2692
+083c1c6e06fcc2c04dab96b6c6f4b799
+7ab176df59f9d108addc55f002599a05
+475d3e4d1b0d5fdca84f6cf27b8c4670
+8095eb4edb89dd0bda7a3d44cbf40c75
+3c6b1f9ba99a1f50013c61131f8cc744
+-----END OpenVPN Static key V1-----
 </tls-crypt>"}]
 }
